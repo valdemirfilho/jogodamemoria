@@ -107,6 +107,10 @@ function addCardToListOpenCards(evt) {
 }
 
 function memoryGameMatch(evt) {
+    let myAudio2 = document.createElement('audio');
+    myAudio2.src = 'sounds/bell.mp3';
+    myAudio2.play();
+
     let alvo = document.getElementsByClassName(elementsList[0].firstElementChild.classList[1]);
     // console.log(alvo);
     console.log(alvo[0].parentElement);
@@ -140,6 +144,8 @@ function memoryGameNoMatch(evt) {
 
     elementsList = [];
     incrementMoveCount();
+
+    let myAudio = document.createElement('audio');
     myAudio.src = 'sounds/som_icq.mp3';
     myAudio.play();
 }
@@ -158,7 +164,6 @@ function incrementMoveCount() {
     }
 }
 
-let myAudio = document.createElement('audio');
 
 //Event CLICK
 deck.addEventListener('click', function (evt) {
