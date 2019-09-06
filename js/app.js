@@ -140,6 +140,7 @@ function memoryGameNoMatch(evt) {
 
     elementsList = [];
     incrementMoveCount();
+    myAudio.src = 'sounds/som_icq.mp3';
     myAudio.play();
 }
 
@@ -158,7 +159,6 @@ function incrementMoveCount() {
 }
 
 let myAudio = document.createElement('audio');
-myAudio.src = 'sounds/som_icq.mp3';
 
 //Event CLICK
 deck.addEventListener('click', function (evt) {
